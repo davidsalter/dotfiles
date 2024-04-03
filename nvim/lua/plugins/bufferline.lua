@@ -1,5 +1,6 @@
 return {
 	"akinsho/bufferline.nvim",
+	lazy = false,
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
@@ -14,4 +15,9 @@ return {
 			},
 		})
 	end,
+	keys = {
+		{ "<C-h>", ":bprev<cr>", "Previous buffer" },
+		{ "<C-l>", ":bnext<cr>", "Next buffer" },
+		{ "<C-q>", ":bd<cr>", "Close buffer" },
+	},
 }
