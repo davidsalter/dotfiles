@@ -24,6 +24,7 @@ return {
         defaults = {
           file_ignore_patterns = {
             "bin/*",
+            "**/*.class",
           },
         },
       })
