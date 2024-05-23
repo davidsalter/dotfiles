@@ -1,8 +1,26 @@
 # Personal Dotfiles
 
-## neovim
+These are my personal dotfiles for:
+
+* Neovim
+* Kitty
+
+## Installation Details
+
+### 1. Clone dotfiles
 
 ``` bash
-ln -s ~/Code/dotfiles/nvim ~/.config/nvim
-ln -s ~/Code/dotfiles/kitty ~/.config/kitty
+git clone git@github.com:davidsalter/dotfiles.git
+```
+
+### 2. Install Neovim config
+
+``` bash
+ln -s ~/Code/davidsalter/dotfiles/nvim ~/.config/nvim
+```
+
+### 3. Install Kitty Config
+
+``` bash
+ln -s ~/Code/davidsalter/dotfiles/kitty ~/.config/kitty
 ```
