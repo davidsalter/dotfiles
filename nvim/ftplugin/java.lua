@@ -1,5 +1,6 @@
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-local workspace_dir = "/home/david/.workspace/" .. project_name
+local home = os.getenv('HOME')
+local workspace_dir = home .. "/.workspace/" .. project_name
 local config = {
 	cmd = {
 		"java",
@@ -14,11 +15,11 @@ local config = {
 		"java.base/java.util=ALL-UNNAMED",
 		"--add-opens",
 		"java.base/java.lang=ALL-UNNAMED",
-    "-javaagent:/home/david/.local/share/nvim/mason/packages/jdtls/lombok.jar",
+    "-javaagent:" .. home .. "/.local/share/nvim/mason/packages/jdtls/lombok.jar",
 		"-jar",
-		vim.fn.glob("/home/david/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
+		vim.fn.glob(home .. "/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
 		"-configuration",
-		"/home/david/.local/share/nvim/mason/packages/jdtls/config_linux",
+		home .. "/.local/share/nvim/mason/packages/jdtls/config_linux",
 		"-data",
 		workspace_dir,
 	},
